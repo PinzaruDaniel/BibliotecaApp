@@ -203,7 +203,7 @@ namespace BibliotecaApp.Forms
             grid.RowHeadersWidth = 82;
             grid.RowTemplate.Height = 32;
             grid.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            grid.Size = new Size(1809, 905);
+            grid.Size = new Size(1623, 863);
             grid.TabIndex = 0;
             // 
             // CartiForm
