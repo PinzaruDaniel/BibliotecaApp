@@ -14,6 +14,9 @@ namespace BibliotecaApp.Forms
 
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             panelHeader = new Panel();
             lblTitle = new Label();
             lblSubtitle = new Label();
@@ -166,12 +169,41 @@ namespace BibliotecaApp.Forms
             // 
             // grid
             // 
-            grid.ColumnHeadersHeight = 46;
-            grid.Location = new Point(0, 0);
+            grid.AllowUserToAddRows = false;
+            grid.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(235, 244, 255);
+            grid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            grid.BackgroundColor = Color.White;
+            grid.BorderStyle = BorderStyle.None;
+            grid.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(26, 60, 90);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            grid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            grid.ColumnHeadersHeight = 38;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = SystemColors.Window;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle3.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(70, 160, 220);
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            grid.DefaultCellStyle = dataGridViewCellStyle3;
+            grid.Dock = DockStyle.Fill;
+            grid.EnableHeadersVisualStyles = false;
+            grid.Location = new Point(0, 266);
             grid.Margin = new Padding(6, 6, 6, 6);
+            grid.MultiSelect = false;
             grid.Name = "grid";
+            grid.ReadOnly = true;
             grid.RowHeadersWidth = 82;
-            grid.Size = new Size(446, 320);
+            grid.RowTemplate.Height = 32;
+            grid.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            grid.Size = new Size(1809, 905);
             grid.TabIndex = 0;
             // 
             // CartiForm
@@ -206,29 +238,6 @@ namespace BibliotecaApp.Forms
             btn.UseVisualStyleBackColor   = false;
             btn.Cursor                    = Cursors.Hand;
             btn.Click                    += handler;
-        }
-
-        private static void StyleGrid(DataGridView dgv)
-        {
-            dgv.AllowUserToAddRows    = false;
-            dgv.AllowUserToDeleteRows = false;
-            dgv.BackgroundColor       = Color.White;
-            dgv.BorderStyle           = BorderStyle.None;
-            dgv.CellBorderStyle       = DataGridViewCellBorderStyle.SingleHorizontal;
-            dgv.ColumnHeadersHeight   = 38;
-            dgv.Dock                  = DockStyle.Fill;
-            dgv.EnableHeadersVisualStyles = false;
-            dgv.MultiSelect           = false;
-            dgv.Name                  = "grid";
-            dgv.ReadOnly              = true;
-            dgv.RowTemplate.Height    = 32;
-            dgv.SelectionMode         = DataGridViewSelectionMode.FullRowSelect;
-            dgv.ColumnHeadersDefaultCellStyle.BackColor   = Color.FromArgb(26, 60, 90);
-            dgv.ColumnHeadersDefaultCellStyle.ForeColor   = Color.White;
-            dgv.ColumnHeadersDefaultCellStyle.Font        = new Font("Segoe UI", 9.5f, FontStyle.Bold);
-            dgv.DefaultCellStyle.Font                     = new Font("Segoe UI", 9f);
-            dgv.DefaultCellStyle.SelectionBackColor       = Color.FromArgb(70, 160, 220);
-            dgv.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(235, 244, 255);
         }
 
         #endregion
