@@ -85,6 +85,10 @@ namespace BibliotecaApp.Forms
             panelToolbar.Padding = new Padding(19, 21, 19, 0);
             panelToolbar.Size = new Size(1623, 117);
             panelToolbar.TabIndex = 1;
+            MkBtn(btnAdd, "➕ Autor nou", Color.FromArgb(34, 139, 34), new Point(10, 12), 130, btnAdd_Click);
+            MkBtn(btnEdit, "✏️ Editează", Color.FromArgb(100, 130, 160), new Point(148, 12), 105, btnEdit_Click);
+            MkBtn(btnDelete, "🗑️ Șterge", Color.FromArgb(196, 43, 43), new Point(261, 12), 95, btnDelete_Click);
+            MkBtn(btnRefresh, "🔄 Reîncarcă", Color.FromArgb(100, 120, 140), new Point(364, 12), 105, btnRefresh_Click);
             // 
             // btnAdd
             // 
@@ -200,7 +204,7 @@ namespace BibliotecaApp.Forms
             ResumeLayout(false);
         }
 
-        private static void StyleToolbarButton(Button btn, string text, Color color, Point loc, EventHandler handler)
+        private static void MkBtn(Button btn, string text, Color color, Point loc, int width, EventHandler handler)
         {
             btn.BackColor                       = color;
             btn.FlatStyle                       = FlatStyle.Flat;
@@ -208,8 +212,7 @@ namespace BibliotecaApp.Forms
             btn.Font                            = new Font("Segoe UI", 8.5f, FontStyle.Bold);
             btn.ForeColor                       = Color.White;
             btn.Location                        = loc;
-            btn.Name                            = "btn_" + text.Replace(" ", "");
-            btn.Size                            = new Size(115, 30);
+            btn.Size                            = new Size(width, 30);
             btn.Text                            = text;
             btn.UseVisualStyleBackColor         = false;
             btn.Cursor                          = Cursors.Hand;
