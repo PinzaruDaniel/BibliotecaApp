@@ -203,7 +203,7 @@ namespace BibliotecaApp.Forms
             grid.RowHeadersWidth = 82;
             grid.RowTemplate.Height = 32;
             grid.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            grid.Size = new Size(1809, 905);
+            grid.Size = new Size(1623, 863);
             grid.TabIndex = 0;
             // 
             // CartiForm
@@ -225,7 +225,7 @@ namespace BibliotecaApp.Forms
             ResumeLayout(false);
         }
 
-        private static void MakeBtn(Button btn, string text, Color color, Point loc, EventHandler handler)
+        private static void MakeBtn(Button btn, string text, Color color, Point loc, int width, EventHandler handler)
         {
             btn.BackColor                 = color;
             btn.FlatStyle                 = FlatStyle.Flat;
@@ -233,7 +233,7 @@ namespace BibliotecaApp.Forms
             btn.Font                      = new Font("Segoe UI", 8.5f, FontStyle.Bold);
             btn.ForeColor                 = Color.White;
             btn.Location                  = loc;
-            btn.Size                      = new Size(110, 30);
+            btn.Size                      = new Size(width, 30);
             btn.Text                      = text;
             btn.UseVisualStyleBackColor   = false;
             btn.Cursor                    = Cursors.Hand;
