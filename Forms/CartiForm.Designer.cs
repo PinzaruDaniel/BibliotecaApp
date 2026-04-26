@@ -222,6 +222,7 @@ namespace BibliotecaApp.Forms
             dgv.MultiSelect           = false;
             dgv.Name                  = "grid";
             dgv.ReadOnly              = true;
+            dgv.RowHeadersWidth       = 41;
             dgv.RowTemplate.Height    = 32;
             dgv.SelectionMode         = DataGridViewSelectionMode.FullRowSelect;
             dgv.ColumnHeadersDefaultCellStyle.BackColor   = Color.FromArgb(26, 60, 90);
