@@ -12,6 +12,10 @@ namespace BibliotecaApp.Forms
         {
             Text = "Autori";
             InitializeComponent();
+            StyleToolbarButton(btnAdd, "➕ Adaugă", Color.FromArgb(34, 139, 34), new Point(19, 26), btnAdd_Click);
+            StyleToolbarButton(btnEdit, "✏️ Editează", Color.FromArgb(100, 130, 160), new Point(142, 26), btnEdit_Click);
+            StyleToolbarButton(btnDelete, "🗑️ Șterge", Color.FromArgb(196, 43, 43), new Point(265, 26), btnDelete_Click);
+            StyleToolbarButton(btnRefresh, "🔄 Reîncarcă", Color.FromArgb(100, 120, 140), new Point(388, 26), btnRefresh_Click);
             LoadData();
         }
 

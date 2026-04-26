@@ -13,6 +13,10 @@ namespace BibliotecaApp.Forms
         {
             Text = "Cărți";
             InitializeComponent();
+            MakeBtn(btnAdd, "➕ Adaugă", Color.FromArgb(34, 139, 34), new Point(19, 26), btnAdd_Click);
+            MakeBtn(btnEdit, "✏️ Editează", Color.FromArgb(100, 130, 160), new Point(137, 26), btnEdit_Click);
+            MakeBtn(btnDelete, "🗑️ Șterge", Color.FromArgb(196, 43, 43), new Point(255, 26), btnDelete_Click);
+            MakeBtn(btnRefresh, "🔄 Reîncarcă", Color.FromArgb(100, 120, 140), new Point(373, 26), btnRefresh_Click);
             LoadData();
         }
 
