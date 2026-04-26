@@ -173,6 +173,7 @@ namespace BibliotecaApp.Forms
             grid.RowHeadersWidth = 82;
             grid.Size = new Size(446, 320);
             grid.TabIndex = 0;
+            StyleGrid(grid);
             // 
             // CartiForm
             // 
