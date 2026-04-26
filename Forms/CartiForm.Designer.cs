@@ -170,7 +170,6 @@ namespace BibliotecaApp.Forms
             grid.Location = new Point(0, 0);
             grid.Margin = new Padding(6, 6, 6, 6);
             grid.Name = "grid";
-            grid.RowHeadersWidth = 82;
             grid.Size = new Size(446, 320);
             grid.TabIndex = 0;
             StyleGrid(grid);
